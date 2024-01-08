@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg2"
+        tools:context=".MainActivity">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/songName"
+                android:hint="Enter Song Name"
+                android:textColorHint="@color/smokeWhite"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Musify"
+                android:textColor="@color/smokeWhite"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                android:src="@drawable/baseline_queue_music_24" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/song"
+                    android:layout_marginTop="35dp"
+                    android:text="Tu Hai Kahan"
+                    android:visibility="invisible"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/smokeWhite"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/rewind"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/rewind" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp">
+
+                    <ImageView
+                        android:id="@+id/play"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="playSound"
+                        android:src="@drawable/baseline_play_arrow_24" />
+
+                    <ImageView
+                        android:id="@+id/pause"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="playSound"
+                        android:src="@drawable/pause_24"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/forward"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/fast_forward_24" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:max="263391"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_view_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:text="0min 0 sec"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </FrameLayout>
+</layout>
